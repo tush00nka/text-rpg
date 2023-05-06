@@ -1,0 +1,25 @@
+{
+    "items": [
+        {
+            "item_id": 0,
+            "item_name": "Wood Log",
+            "item_description": "A log, like... it's wood!",
+            "item_type": "Resource",
+            "stackable": true
+        },
+        {
+            "item_id": 1,
+            "item_name": "Rock",
+            "item_description": "It's about drive, it's about power...",
+            "item_type": "Resource",
+            "stackable": true
+        },
+        {
+            "item_id": 2,
+            "item_name": "Iron Sword",
+            "item_description": "Slash!",
+            "item_type": "MeleeWeapon",
+            "stackable": false
+        }
+    ]
+}
