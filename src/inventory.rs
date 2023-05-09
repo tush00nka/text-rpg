@@ -1,6 +1,7 @@
 use std::fs::File;
 use std::io::prelude::*;
 
+use colored::Colorize;
 use serde::Deserialize;
 
 pub struct Inventory {
@@ -26,7 +27,7 @@ impl Inventory {
     }
 
     pub fn list(&self) -> String {
-        let mut list: String = "".to_string();
+        let mut list: String = String::new();
         if self.items.len() <= 0 {
             list += "\nYou've got no items in your bag!\n";
         }
@@ -51,6 +52,21 @@ impl Inventory {
         }
 
         list
+    }
+
+    pub fn get_description(&self, id: usize) -> String {
+        let desc;
+        let i = id-1;
+        if self.items.len() > i {
+            let item_name = &self.items[i].item.item_name;
+            let item_desc = &self.items[i].item.item_description;
+            desc = format!("Description of {item_name}:\n{item_desc}");
+        }
+        else {
+            desc = "No item in this slot!".yellow().to_string();
+        }
+
+        desc
     }
 }
 

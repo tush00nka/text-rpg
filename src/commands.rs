@@ -23,7 +23,13 @@ impl Commands {
         help - Show this help
         quit - Quits the game
         
+        map - Show the world map
+        area - Show your current area
+
         bag - Show a list of items you have
+        desc [slot_id] - Show a description of an item in the bag
+
+        w/a/s/d - Go to choosen direction
 
         --- cheats ---
         give [item_id] - Add an item to your bag
